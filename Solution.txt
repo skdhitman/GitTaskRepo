@@ -1,0 +1,39 @@
+mkdir GitTaskRepo
+cd GitTaskRepo
+
+git init
+notepad file1.txt
+notepad file2.txt
+notepad file3.txt
+
+git checkout -b Dev
+git add file1.txt
+git commit -m "First commit to file1.txt in Dev branch"
+git status
+git log
+
+git checkout master
+git checkout -b Test
+git add file2.txt file3.txt
+git commit -m "Commit file2.txt and file3.txt to Test branch"
+git status
+git log
+
+// after making changes to file1.txt
+git status
+git diff file1.txt
+
+git checkout master
+git merge Dev Test
+
+git remote add origin https://github.com/skdhitman/GitTaskRepo.git
+git push -u origin master
+
+git clone https://github.com/skdhitman/GitTaskRepo.git
+cd GitTaskRepo
+notepad Solution.txt   // add all the commands used
+git add Solution.txt
+git commit -m "Add Solution.txt in the master branch"
+git push origin master
+
+
