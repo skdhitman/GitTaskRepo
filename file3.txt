@@ -1,0 +1,4 @@
+def func(n):
+  print("Testing file", n)
+
+func(3)
